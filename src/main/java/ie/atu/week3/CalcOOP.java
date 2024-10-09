@@ -13,7 +13,7 @@ public class CalcOOP {
         System.out.println("Please enter the second number: ");
         int b = sc.nextInt();
 
-        System.out.println("Please enter an operator (add, subtract, multiply, or divide): ");
+        System.out.println("Please enter an operator (add, subtract, multiply, divide, or exponent): ");
         String op = sc.next();
 
 
@@ -31,6 +31,9 @@ public class CalcOOP {
                 break;
             case "divide":
                 divide(a, b);
+                break;
+            case "exponent":
+                exponent(a, b);
                 break;
             default:
                 System.out.println("Invalid operator");
@@ -65,4 +68,11 @@ public class CalcOOP {
             System.out.println("Error: Division by zero is not allowed.");
         }
     }
+
+    // Method to perform exponentiation (a raised to the power of b)
+    public static void exponent(int a, int b) {
+        double sum = Math.pow(a, b);
+        System.out.println("The sum is: " + sum);
+    }
 }
+
