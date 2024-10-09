@@ -13,14 +13,18 @@ public class CalcOOP {
         System.out.println("Please enter the second number: ");
         int b = sc.nextInt();
 
-        System.out.println("Please enter an operator: ");
+        System.out.println("Please enter an operator (add or subtract): ");
         String op = sc.next();
+
 
 
         // Switch statement to determine operation
         switch (op) {
             case "add":
                 add(a, b);
+                break;
+            case "subtract":
+                subtract(a, b);
                 break;
             default:
                 System.out.println("Invalid operator");
@@ -33,4 +37,11 @@ public class CalcOOP {
         int sum = a + b;
         System.out.println("The sum is: " + sum);
     }
+
+    // Method to perform subtraction
+    public static void subtract(int a, int b) {
+        int sum = a - b;
+        System.out.println("The sum is: " + sum);
+    }
 }
+
