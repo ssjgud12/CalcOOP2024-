@@ -13,7 +13,7 @@ public class CalcOOP {
         System.out.println("Please enter the second number: ");
         int b = sc.nextInt();
 
-        System.out.println("Please enter an operator (add, subtract, or multiply): ");
+        System.out.println("Please enter an operator (add, subtract, multiply, or divide): ");
         String op = sc.next();
 
 
@@ -28,6 +28,9 @@ public class CalcOOP {
                 break;
             case "multiply":
                 multiply(a, b);
+                break;
+            case "divide":
+                divide(a, b);
                 break;
             default:
                 System.out.println("Invalid operator");
@@ -51,5 +54,15 @@ public class CalcOOP {
     public static void multiply(int a, int b) {
         int sum = a * b;
         System.out.println("The sum is: " + sum);
+    }
+
+    // Method to perform division
+    public static void divide(int a, int b) {
+        if (b != 0) {
+            int sum = a / b;
+            System.out.println("The sum is: " + sum);
+        } else {
+            System.out.println("Error: Division by zero is not allowed.");
+        }
     }
 }
