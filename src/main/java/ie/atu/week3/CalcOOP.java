@@ -13,7 +13,7 @@ public class CalcOOP {
         System.out.println("Please enter the second number: ");
         int b = sc.nextInt();
 
-        System.out.println("Please enter an operator (add or subtract): ");
+        System.out.println("Please enter an operator (add, subtract, or multiply): ");
         String op = sc.next();
 
 
@@ -25,6 +25,9 @@ public class CalcOOP {
                 break;
             case "subtract":
                 subtract(a, b);
+                break;
+            case "multiply":
+                multiply(a, b);
                 break;
             default:
                 System.out.println("Invalid operator");
@@ -43,5 +46,10 @@ public class CalcOOP {
         int sum = a - b;
         System.out.println("The sum is: " + sum);
     }
-}
 
+    // Method to perform multiplication
+    public static void multiply(int a, int b) {
+        int sum = a * b;
+        System.out.println("The sum is: " + sum);
+    }
+}
